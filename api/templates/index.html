@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Add CSS for the grid layout */
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+        }
+    </style>
+    <title>Motor Traffic Department</title>
+</head>
+<body>
+    <header>
+        <h1>Motor Traffic Department</h1>
+    </header>
+    <main>
+        <section id="laneViolation">
+            <h2>Lane Violation</h2>
+            <button id="reportLaneViolation"><img src="{{ url_for('static', filename='images/lane_violation.png') }}" alt="Report Lane Violation"></button>
+        </section>
+        <section id="highSpeedViolation">
+            <h2>High Speed Violation</h2>
+            <button id="reportHighSpeedViolation"><img src="{{ url_for('static', filename='images/high_speed.png') }}" alt="Report High Speed Violation"></button>
+        </section>
+        <section id="redLightViolation">
+            <h2>Red Light Violation</h2>
+            <button id="reportRedLightViolation"><img src="{{ url_for('static', filename='images/traffic_light.jpg') }}" alt="Report Red Light Violation"></button>
+        </section>
+        <section id="finingSystem">
+            <h2>Fining System</h2>
+            <button id="reportFiningSystem"><img src="{{ url_for('static', filename='images/fining.png') }}" alt="Open Fining System"></button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Motor Traffic Department</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
